@@ -34,6 +34,7 @@ pycountry
 python-dotenv
 pyshorteners
 python-magic
+pytz
 pymongo
 Pyrofork==2.2.11
 quoters
