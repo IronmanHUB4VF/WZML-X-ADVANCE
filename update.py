@@ -57,7 +57,7 @@ if UPGRADE_PACKAGES.lower() == 'true':
     packages = [dist.project_name for dist in working_set]
     scall("uv pip install --system " + ' '.join(packages), shell=True)
 
-UPSTREAM_REPO = environ.get('UPSTREAM_REPO', 'https://gitlab.com/Jot4349/WZML-X-ADVANCE')
+UPSTREAM_REPO = environ.get('UPSTREAM_REPO', 'https://github.com/IronmanHUB4VF/WZML-X-ADVANCE')
 if len(UPSTREAM_REPO) == 0:
     UPSTREAM_REPO = None
 
@@ -70,8 +70,8 @@ if UPSTREAM_REPO is not None:
         srun(["rm", "-rf", ".git"])
 
     update = srun([f"git init -q \
-                     && git config --global user.email doc.adhikari@gmail.com \
-                     && git config --global user.name weebzone \
+                     && git config --global user.email bp704166@gmail.com \
+                     && git config --global user.name IronmanHUB4VF \
                      && git add . \
                      && git commit -sm update -q \
                      && git remote add origin {UPSTREAM_REPO} \
